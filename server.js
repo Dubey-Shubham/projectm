@@ -89,6 +89,7 @@ io.on('connection', (socket)=> {
 
 
 app.get('/rooms', (req, res)=> {
+  res.setHeader("Access-control-Allow-Credentials","true");
   res.json(rooms)
 })
 
